@@ -1,3 +1,33 @@
+version 0.0.18
+* create macOS package
+    macOS users can now run the app without installation:
+    - download https://github.com/eliranwong/gobible/archive/refs/heads/main.zip
+    - unzip
+    - double-click "GoBible.app" in the unzipped folder
+
+version 0.0.17
+* improved bible search speed
+* multiple search results are shown in separate windows
+
+version 0.0.16
+* added a window showing all search results
+
+version 0.0.15
+* added verse count to search tabs
+
+version 0.0.14
+* added progress bar for searching bible
+* improved search performance
+
+version 0.0.13
+* search results in tabs
+
+version 0.0.12
+* fixed saving preferences
+
+version 0.0.11
+* fixed fyne theme
+
 version 0.0.10
 * Added config preferences
 

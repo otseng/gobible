@@ -8,17 +8,13 @@ import (
 	"path/filepath"
 	"strings"
 
-	"fyne.io/fyne/v2"
 	"github.com/eliranwong/gobible/internal/bible"
 	"github.com/eliranwong/gobible/internal/parser"
 	"github.com/eliranwong/gobible/internal/share"
 	"github.com/eliranwong/gobible/internal/shortcuts"
 )
 
-var Gobible fyne.App
-
-func Terminal(gobible fyne.App) {
-	Gobible = gobible
+func Terminal() {
 	for {
 		share.Divider()
 		prompt()
@@ -27,7 +23,7 @@ func Terminal(gobible fyne.App) {
 
 func prompt() {
 	var bibleModule string
-	bibles, _ := shortcuts.WalkMatch(filepath.FromSlash("data/bibles"), "*.bible", true)
+	bibles, _ := shortcuts.WalkMatch(filepath.Join(share.Data, filepath.FromSlash("bibles")), "*.bible", true)
 	fmt.Printf("Enter Bible Module:\n| %v |\n(current: %v)\n>>> ", (strings.Join(bibles, " | ")), share.Bible)
 	fmt.Scanln(&bibleModule)
 	fmt.Println("Read or search bible")
